@@ -1,0 +1,17 @@
+deptrac:
+  analyser:
+    types:
+      - class
+      - class_superglobal
+      - file
+      - function
+      - function_call
+      - function_superglobal
+      - use
+
+  paths:
+    - src
+    - tests
+
+  layers:
+    - { name: Svg, collectors: [ { type: directory, value: src/Render/Svg/.* } ] }

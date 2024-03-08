@@ -1,0 +1,54 @@
+{
+  "description": "Library with abstractions on geometry shapes and visualise it with SVG",
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Illia Dulaiev",
+      "email": "illia.dulaiev@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1 || ^8.2 || ^8.3"
+  },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.42.0",
+    "friendsofphp/php-cs-fixer": "^3.51.0",
+    "jetbrains/phpstorm-stubs": "^2023.3",
+    "mockery/mockery": "^1.6.7",
+    "phpunit/phpunit": "^10.5.11",
+    "phpyh/coding-standard": "^2.6.1",
+    "psalm/plugin-phpunit": "^0.18.4",
+    "qossmic/deptrac-shim": "^1.0.2",
+    "symfony/var-dumper": "^6.4.4 || ^7.0.4",
+    "vimeo/psalm": "^5.22.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Geometra\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Geometra\\": [
+        "tests/"
+      ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "ergebnis/composer-normalize": true
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "deptract": "deptrac analyse --cache-file=var/.deptrac.cache",
+    "fixcs": [
+      "php-cs-fixer fix -v",
+      "php-cs-fixer fix --config=.sort.php-cs-fixer.dist.php -v"
+    ],
+    "pre-command-run": "mkdir -p var",
+    "psalm": "psalm --show-info --no-diff",
+    "test": "phpunit"
+  }
+}
