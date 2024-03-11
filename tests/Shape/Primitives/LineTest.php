@@ -1,9 +1,7 @@
 <?php
 
-namespace Shape\Primitives;
+namespace Geometra\Shape\Primitives;
 
-use Geometra\Shape\Primitives\Line;
-use Geometra\Shape\Primitives\Point;
 use PHPUnit\Framework\TestCase;
 
 class LineTest extends TestCase

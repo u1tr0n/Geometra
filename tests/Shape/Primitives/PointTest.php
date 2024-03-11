@@ -1,8 +1,7 @@
 <?php
 
-namespace Shape\Primitives;
+namespace Geometra\Shape\Primitives;
 
-use Geometra\Shape\Primitives\Point;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -20,7 +19,7 @@ class PointTest extends TestCase
      * @param float $y2
      * @return void
      * @dataProvider dataProviderEqual
-     * @covers       \Geometra\Shape\Primitives\Point::equalTo
+     * @covers       \Geometra\Visualization\Shape\Point::equalTo
      */
     public function test_equalTo_self(float $x1, float $y1, float $x2, float $y2): void
     {
@@ -64,7 +63,7 @@ class PointTest extends TestCase
      * @param array $array
      * @return void
      * @dataProvider dataProvider
-     * @covers       \Geometra\Shape\Primitives\Point::toArray
+     * @covers       \Geometra\Visualization\Shape\Point::toArray
      */
     public function testToArray(float $x, float $y, string $string, array $array): void
     {

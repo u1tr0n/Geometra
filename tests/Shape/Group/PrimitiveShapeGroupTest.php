@@ -1,8 +1,7 @@
 <?php
 
-namespace Shape\Group;
+namespace Geometra\Shape\Group;
 
-use Geometra\Shape\Group\PrimitiveShapeGroup;
 use Geometra\Shape\Primitives\Point;
 use PHPUnit\Framework\TestCase;
 
